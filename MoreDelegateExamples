@@ -1,0 +1,16 @@
+
+namespace ConsoleApp1
+{
+    public delegate void Peanut();
+
+    class Program
+    {
+        static Peanut aDog = new Peanut(IsBarking);
+        static void Main(string[] args)
+        {
+            aDog.Invoke(); 
+        }
+        public static void IsBarking() { Console.WriteLine("Peanut is barking");}
+ 
+    }
+}
